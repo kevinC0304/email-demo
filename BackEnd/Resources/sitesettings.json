@@ -1,0 +1,12 @@
+{
+  "Autotolerance": 1,
+  "Manualtolerance": 1,
+  "production": false,
+  "URLprotocal": "http",
+  "Port": "9092",
+  "IsPort": false,
+  "BuildVersion": "1.3.33.0",
+  "ApplicationTitle": "WinBEAT NEXT",
+  "AuthClientId": "WinBeatCloudApp",
+  "EbixUsers": "akash.garg@ebix.com,shilpi.kumar"
+}

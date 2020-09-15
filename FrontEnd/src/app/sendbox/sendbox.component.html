@@ -1,0 +1,30 @@
+<input class="e-input" type="text" placeholder="To" [(ngModel)]="toValue" />
+<input class="e-input" type="text" placeholder="Cc" [(ngModel)]="CcValue" />
+<input class="e-input" type="text" placeholder="Bcc" [(ngModel)]="BccValue" />
+<input class="e-input" type="text" placeholder="Subject" [(ngModel)]="subjectValue" />
+
+
+
+<ejs-richtexteditor id='defaultRTE' #textbox [fontFamily]='fontFamily'  [insertImageSettings]='insertImageSettings'  [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' >
+
+   
+   
+</ejs-richtexteditor>
+
+<ejs-uploader #defaultupload [asyncSettings]='path' [buttons]="buttons"  [files]='preLoadFiles'   (failure)="onuploadFailed($event)" (progress)="onFileUpload($event)" (success)="onuploadSuccess($event)">
+    <ng-template #template let-data="" >
+      
+        
+            <a  href="#"  (click)='openFile(data.name)'>{{data.name}}</a>
+            <progress id='progressBar' class='progressbar' value='0' max='100'></progress>
+            <span class='percent-td percent'></span>
+            <span class='e-icons e-file-delete-btn' (click)='removeFile(data.name)' title='Remove'></span>  
+            
+
+    </ng-template>
+</ejs-uploader>
+
+<ejs-dialog id='dialog' #ejDialog isModal='true'   [visible]='false'  (overlayClick)="onOverlayClick()"
+content='This is a modal dialog'  width='250px'> </ejs-dialog>
+<button #togglebtn ejs-button cssClass="e-flat" (click)="send()"  cssClass="e-info" [isToggle]="true" content="Send"></button>
+
